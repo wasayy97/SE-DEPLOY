@@ -5,7 +5,6 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <title>Movie Page</title>
-      <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="static/css/stylesMDV.css">
    </head>
    <body>
@@ -75,7 +74,7 @@
                <a href="{{movie_trailer_link}}" >-->
             <img  img src="data:;base64,{{movie_front_poster}}" width="250px" height="350px" class='plus-image',text=trailer/></a>
             <div>
-               <a href="/seatviewpage" ><img  src="{{url_for('static', filename='book_ticket.jpg')}}"   width="170" height="50"class='plus-button'/></a>
+               <a href="/seatviewpage" ><img  src="{{url_for('static', filename='../static/img/book_ticket.jpg')}}"   width="170" height="50"class='plus-button'/></a>
             </div>
             <div>
                <h1 class="textgraph" style="color:rgb(247, 7, 7);" > Genre : {{movie_genere}}    Rating :{{movie__rating}}</h1>

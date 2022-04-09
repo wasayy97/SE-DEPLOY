@@ -125,7 +125,8 @@ def delete_employee():
 def Indexseat():
      list_users = db.get_seat_details()
      #print(list_users)
-     return render_template('seat_selectionpage.html', list_users = list_users)
+
+     return render_template('seatSelectionLegacy.html', list_users = list_users)
  
 
 @app.route('/update_seates', methods=['POST'])
