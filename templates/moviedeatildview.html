@@ -1,102 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body data-spy="scroll"  >
-   
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
-          <a class="navbar-brand" href="#">{{movie_name}}</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                  <a class="nav-link active" href="{{ url_for('home') }}">Home <span class="sr-only"></span></a>
-              </li>
-          
-               </ul>
+   <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <title>Movie Page</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="static/css/stylesMDV.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse ">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="navbar-header">
+                     <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                     <a href="#" class="navbar-brand">MOVIE TICKET BOOKING SYSTEM</a>
+                  </div>
+                  <div class="navbar-collapse collapse" id="mobile_menu">
+                     <ul class="nav navbar-nav">
+                        <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+                        <li>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+                              <li><a href="/signup">Contact Us</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="/registrationInfox">Registeration Information</a></li>
+                     </ul>
+                     <ul class="nav navbar-nav">
+                        <li>
+                           <form action="" class="navbar-form">
+                              <div class="form-group">
+                                 <div class="input-group">
+                                    <input type="search" name="search" id="" placeholder="Search Anything Here..." class="form-control">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                                 </div>
+                              </div>
+                           </form>
+                        </li>
+                     </ul>
+                     <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                        <li>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+                              <li><a href="/login">Login</a></li>
+                              <li><a href="/signup">Sign Up</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-map-marker"></span> Location <span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+                              <li>
+                                 <option value="1">Montreal</option>
+                              </li>
+                              <li>
+                                 <option value="2">Quebec City</option>
+                              </li>
+                              <li>
+                                 <option value="3">Toronto</option>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
             </div>
-        </div>
-      
-   
-    </nav>
-<!-- 
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
-    <div class="container">
-    <a href="#" class="navbar-brand">{{movie_name}}</a>
-    </div> -->
-
-<style>
-.product-image{
-    position: relative;
-    height: 80vh;
-    width: 175vh;
-    filter: blur(8px);
-    -webkit-filter: blur(2px);
-}
-.plus-image {
-    left: 30%;
-    top: 50%;
-    position: absolute;
-    margin-top: -25%;
-    margin-left: -25%;
-}
-
-.plus-button{
-    left: 75%;
-    top: 100%;
-    position: absolute;
-    margin-top: -25%;
-    margin-left: -25%;
-    
-}
-.paragraph{
-    left: 70%;
-    top: 65%;
-    position: absolute;
-    margin-top: -25%;
-    margin-left: -25%;
-    font-size: 25px;
-    height: 20px;
-    width: 50%;
-    
-}
-.textgraph{
-    left: 70%;
-    top: 95%;
-    position: absolute;
-    margin-top: -25%;
-    margin-left: -25%;
-    font-size: 25px;
-    height: 20px;
-    width: 50%;
-    
-}
-</style>
-<br>
-<div class = "row text-center" >
-    <div class="col-xs-6 text-center" style="background-color:none; margin-top:10px;">
+         </div>
+      </nav>
+      <
+      <br>
+      <div class = "row text-center" >
+         <div class="row-sm-6 text-center" style="background-color:none; margin-top:10px;">
             <img src="data:;base64,{{movie_bg_image}}"  class='product-image'>
-            <a href="{{movie_trailer_link}}" ><img  img src="data:;base64,{{movie_front_poster}}" width="250px" height="350px" class='plus-image',text=trailer/></a></img>
-            <div><a href="/seatviewpage" ><img  src="{{url_for('static', filename='book_ticket.jpg')}}"   width="170" height="50"class='plus-button'/></a></img></div>
-            
-            <div><h1 class="textgraph" style="color:rgb(247, 7, 7);" > Genre : {{movie_genere}}    Rating :{{movie__rating}}</h1></div>
-            
-    </div>
-</div>
-<div>
-    <h1><div><h1 style="color:rgb(12, 11, 11);" > ABOUT THE MOVIE</h1></div></h1>
-<div>
-    <p style="color:rgb(248, 195, 186);" > {{movie_description}} </p></div>
-</div>
-</body>
+            <a href="{{movie_trailer_link}}" >
+            <img  img src="data:;base64,{{movie_front_poster}}" width="250px" height="350px" class='plus-image',text=trailer/></a>
+            <div>
+               <a href="/seatviewpage" ><img  src="{{url_for('static', filename='book_ticket.jpg')}}"   width="170" height="50"class='plus-button'/></a>
+            </div>
+            <div>
+               <h1 class="textgraph" style="color:rgb(247, 7, 7);" > Genre : {{movie_genere}}    Rating :{{movie__rating}}</h1>
+            </div>
+         </div>
+      </div>
+      <div>
+         <div>
+            <h1 style="color:rgb(12, 11, 11);" > ABOUT THE MOVIE</h1>
+         </div>
+         <div>
+            <p style="color:rgb(248, 195, 186);" > {{movie_description}} </p>
+         </div>
+      </div>
+      <div class="row-sm-6">
+      <div class="embed-responsive embed-responsive-4by3">
+         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qN3OueBm9F4"></iframe>
+      </div>
+      </div>
+   </body>
 </html>
-
