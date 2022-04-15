@@ -68,16 +68,18 @@
             </div>
          </div>
       </nav>
-      <div class = "col text-center" >
+       <div class = "col text-center" >
          <div class="col-sm-6 text-center">
             <!-- <img src="data:;base64,{{movie_bg_image}}"  class='product-image'>
                <a href="{{movie_trailer_link}}" >-->
             <img  img src="data:;base64,{{movie_front_poster}}" width="250px" height="350px" class='plus-image',text=trailer/></a>
+            <br><br>
             <div>
                <a href="/seatviewpage" ><img  src="{{url_for('static', filename='../static/img/book_ticket.jpg')}}"   width="170" height="50"class='plus-button'/></a>
             </div>
             <div>
-               <h1 class="textgraph" style="color:rgb(247, 7, 7);" > Genre : {{movie_genere}}    Rating :{{movie__rating}}</h1>
+               <h2 class="textgraph" style="color:rgb(171, 32, 11);" > Genre : {{movie_genere}}</h2>
+               <h2 class="textgraph" style="color:rgb(171, 32, 11);" > Rating :{{movie__rating}}</h2>
             </div>
          </div>
       </div>
@@ -86,7 +88,7 @@
             <h1 style="color:rgb(12, 11, 11);" > ABOUT THE MOVIE</h1>
          </div>
          <div>
-            <p style="color:rgb(248, 195, 186);" > {{movie_description}} </p>
+            <p style="color:rgb(0, 58, 85);" > {{movie_description}} </p>
          </div>
       </div>
    </body>
