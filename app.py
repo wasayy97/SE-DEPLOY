@@ -126,7 +126,7 @@ def Indexseat():
      list_users = db.get_seat_details()
      #print(list_users)
 
-     return render_template('seatSelectionLegacy.html', list_users = list_users)
+     return render_template('seat_selectionPage.html', list_users = list_users)
  
 
 @app.route('/update_seates', methods=['POST'])
@@ -138,7 +138,23 @@ def add_student():
            db.update_seat_by_id(int(i))
     return redirect(url_for("Indexseat"))
        
+@app.route('/admin_login')
+def index_1():
+    return render_template('admin_login.html')
 
+
+@app.route('/admin_loginInfo', methods=['POST', 'GET'])
+def admin_login():
+    if request.method == 'POST':
+        email_html = request.form['email']
+        password_html = request.form['password']
+        User_details = db.get_email_password_details()
+        for i in User_details:
+            emails_temp = (i[0])
+            password_temp = (i[1])
+            if email_html == emails_temp and password_html == password_temp:
+                return render_template("homePage_admin.html")
+        return render_template("wrongpwd.html")
 
 
 if __name__=="__main__":
