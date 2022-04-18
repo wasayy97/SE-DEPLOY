@@ -4,92 +4,76 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <title>Tickets View</title>
-      <link rel="stylesheet" href="static/css/stylesMDV.css">
+      <link rel="stylesheet" href="../static/css/styleTicketView.css">
+      <title>Tickets</title>
    </head>
-   <body>
-      <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-lg-12">
-               <div class="navbar-header">
-                  <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                  <a href="#" class="navbar-brand">MOVIE TICKET BOOKING SYSTEM</a>
-               </div>
-               <div class="navbar-collapse collapse" id="mobile_menu">
-                  <ul class="nav navbar-nav">
-                     <li><a href="{{ url_for('home') }}">Home</a></li>
-                     <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                           <li><a href="/signup">Contact Us</a></li>
-                        </ul>
-                     </li>
-                     <li><a href="/registrationInfox">Registeration Information</a></li>
-                  </ul>
-                  <ul class="nav navbar-nav">
-                     <li>
-                        <form action="" class="navbar-form">
-                           <div class="form-group">
-                              <div class="input-group">
-                                 <input type="search" name="search" id="" placeholder="Search Anything Here..." class="form-control">
-                                 <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                              </div>
-                           </div>
-                        </form>
-                     </li>
-                  </ul>
-                  <ul class="nav navbar-nav navbar-right">
-                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                     <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                           <li><a href="/login">Login</a></li>
-                           <li><a href="/signup">Sign Up</a></li>
-                           <li><a href="/admin_login">Admin Login</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-map-marker"></span> Location <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                           <li>
-                              <option value="1">Montreal</option>
-                           </li>
-                           <li>
-                              <option value="2">Quebec City</option>
-                           </li>
-                           <li>
-                              <option value="3">Toronto</option>
-                           </li>
-                        </ul>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div></nav>
-      <section style="background-color: black">
-         <br><br>
-         <div class="container my-5">
-            <div class="container">
-               <div class="row">
-                  <div class="col-sm-6 text-center">
-                     <img  img src="data:;base64,{{movie_front_poster}}" width="250px" height="350px" class='plus-image',text=trailer/></a>
-                     <br><br>
-                     <div>
-                        <a href="/seatviewpage" ><img  src="{{url_for('static', filename='../static/img/book_ticket.jpg')}}"   width="170" height="50"class='plus-button'/></a>
-                     </div>
+   <body style="background-color: black;">
+      <nav class="navbar navbar-inverse ">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="navbar-header">
+                     <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                     <a href="#" class="navbar-brand">MOVIE TICKET BOOKING SYSTEM</a>
                   </div>
-                  <div class="col-sm-6 text-center">
-<!--                     place the ticket here-->
+                  <div class="navbar-collapse collapse" id="mobile_menu">
+                     <ul class="nav navbar-nav">
+                        <li ><a href="{{ url_for('home') }}">Home</a></li>
+                        <li>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+                              <li><a href="/aboutUs">Contact Us</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                     <ul class="nav navbar-nav navbar-right">
+                        <li>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+                              <li><a href="/login">Login</a></li>
+                              <li><a href="/signup">Sign Up</a></li>
+                           </ul>
+                        </li>
+                     </ul>
                   </div>
                </div>
             </div>
-                  </div>
-               </div>
-            </section>
          </div>
+      </nav>
+      <center>
+         <h2 class="text">Ticket Details</h2>
+      </center>
+      <div class="image">
+         <img  img src="data:;base64,{{movie_front_poster}}" width="250px" height="350px" class='plus-image',text=trailer/>
+      </div>
+      <div class="cardWrap">
+         <div class="card cardLeft">
+            <h1>Startup <span>Cinema</span></h1>
+            <div class="title">
+               <h2>KGF- Chapter 2</h2>
+               <span>movie</span>
+            </div>
+            <div class="name">
+               <h2>Srinidhi Honakere</h2>
+               <span>name</span>
+            </div>
+            <div class="seat">
+               <h2>156</h2>
+               <span>seat</span>
+            </div>
+            <div class="time">
+               <h2>12:00</h2>
+               <span>time</span>
+            </div>
          </div>
-      </section>
+         <div class="card cardRight">
+            <div class="eye"></div>
+            <div class="number">
+               <h3>156</h3>
+               <span>seat</span>
+            </div>
+            <div class="barcode"></div>
+         </div>
+      </div>
    </body>
 </html>
