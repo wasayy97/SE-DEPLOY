@@ -8,89 +8,126 @@
       <link rel="stylesheet" href="static/css/stylesMDV.css">
    </head>
    <body>
-      <nav class="navbar navbar-inverse ">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-lg-12">
-                  <div class="navbar-header">
-                     <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                     <a href="#" class="navbar-brand">MOVIE TICKET BOOKING SYSTEM</a>
-                  </div>
-                  <div class="navbar-collapse collapse" id="mobile_menu">
-                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
-                        <li>
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
-                           <ul class="dropdown-menu">
-                              <li><a href="/signup">Contact Us</a></li>
-                           </ul>
-                        </li>
-                        <li><a href="/registrationInfox">Registeration Information</a></li>
-                     </ul>
-                     <ul class="nav navbar-nav">
-                        <li>
-                           <form action="" class="navbar-form">
-                              <div class="form-group">
-                                 <div class="input-group">
-                                    <input type="search" name="search" id="" placeholder="Search Anything Here..." class="form-control">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                                 </div>
+      <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="navbar-header">
+                  <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                  <a href="#" class="navbar-brand">MOVIE TICKET BOOKING SYSTEM</a>
+               </div>
+               <div class="navbar-collapse collapse" id="mobile_menu">
+                  <ul class="nav navbar-nav">
+                     <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+                     <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="/signup">Contact Us</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="/registrationInfox">Registeration Information</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav">
+                     <li>
+                        <form action="" class="navbar-form">
+                           <div class="form-group">
+                              <div class="input-group">
+                                 <input type="search" name="search" id="" placeholder="Search Anything Here..." class="form-control">
+                                 <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
                               </div>
-                           </form>
-                        </li>
-                     </ul>
-                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                        <li>
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
-                           <ul class="dropdown-menu">
-                              <li><a href="/login">Login</a></li>
-                              <li><a href="/signup">Sign Up</a></li>
-                              <li><a href="/admin_login">Admin Login</a></li>
-                           </ul>
-                        </li>
-                        <li>
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-map-marker"></span> Location <span class="caret"></span></a>
-                           <ul class="dropdown-menu">
-                              <li>
-                                 <option value="1">Montreal</option>
-                              </li>
-                              <li>
-                                 <option value="2">Quebec City</option>
-                              </li>
-                              <li>
-                                 <option value="3">Toronto</option>
-                              </li>
-                           </ul>
-                        </li>
-                     </ul>
-                  </div>
+                           </div>
+                        </form>
+                     </li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                     <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="/login">Login</a></li>
+                           <li><a href="/signup">Sign Up</a></li>
+                           <li><a href="/admin_login">Admin Login</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-map-marker"></span> Location <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li>
+                              <option value="1">Montreal</option>
+                           </li>
+                           <li>
+                              <option value="2">Quebec City</option>
+                           </li>
+                           <li>
+                              <option value="3">Toronto</option>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
                </div>
             </div>
          </div>
-      </nav>
-       <div class = "col text-center" >
-         <div class="col-sm-6 text-center">
-            <!-- <img src="data:;base64,{{movie_bg_image}}"  class='product-image'>
-               <a href="{{movie_trailer_link}}" >-->
-            <img  img src="data:;base64,{{movie_front_poster}}" width="250px" height="350px" class='plus-image',text=trailer/></a>
-            <br><br>
-            <div>
-               <a href="/seatviewpage" ><img  src="{{url_for('static', filename='../static/img/book_ticket.jpg')}}"   width="170" height="50"class='plus-button'/></a>
-            </div>
-            <div>
-               <h2 class="textgraph" style="color:rgb(171, 32, 11);" > Genre : {{movie_genere}}</h2>
-               <h2 class="textgraph" style="color:rgb(171, 32, 11);" > Rating :{{movie__rating}}</h2>
-            </div>
-         </div>
       </div>
-      <div class="col-sm-6 text-center">
-         <div>
-            <h1 style="color:rgb(12, 11, 11);" > ABOUT THE MOVIE</h1>
+      <section style="background-color: black">
+         <div class="container my-5">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-6 text-center">
+                     <img  img src="data:;base64,{{movie_front_poster}}" width="250px" height="350px" class='plus-image',text=trailer/></a>
+                     <br><br>
+                     <div>
+                        <a href="/seatviewpage" ><img  src="{{url_for('static', filename='../static/img/book_ticket.jpg')}}"   width="170" height="50"class='plus-button'/></a>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 text-center">
+                     <p class="text-danger">ABOUT MOVIE</p>
+                     <p>ABOUT MOVIE</p>
+                     <p>ABOUT MOVIE</p>
+                  </div>
+               </div>
+            </div>
+            <hr class="my-5">
+            <section class="">
+               <div class="row">
+                  <div class="col-md-7 mb-4 mb-md-0">
+                     <p>
+                        This app uses the
+                        <a
+                           href="https://api.nasa.gov/api.html#authentication"
+                           target="_blank"
+                           >NASA APOD API</a
+                           >
+                        and presents the best astrophotographic photo of NASA resources
+                        every day.
+                     </p>
+                     <p class="font-weight-bold">
+                        It's built with
+                        <a
+                           href="https://mdbootstrap.com/docs/standard/"
+                           target="_blank"
+                           >MDBootstrap UI KIT</a
+                           >
+                     </p>
+                     <p class="note note-primary">
+                        <strong>Video tutorial:</strong> Watch the video tutorial on the
+                        right to learn how this is build and create your own astronomical
+                        app
+                     </p>
+                  </div>
+                  <div class="col-md-5 mb-4 mb-md-0">
+                     <div class="ratio ratio-16x9">
+                        <iframe
+                           class="shadow-1-strong rounded"
+                           src="https://www.youtube.com/embed/Y1n2a7YxYGY"
+                           title="YouTube video"
+                           allowfullscreen
+                           ></iframe>
+                     </div>
+                  </div>
+               </div>
+            </section>
          </div>
-         <div>
-            <p style="color:rgb(0, 58, 85);" > {{movie_description}} </p>
          </div>
-      </div>
+      </section>
    </body>
 </html>
