@@ -1,0 +1,9 @@
+.zoom:hover {
+    position:relative;
+    top:-25px;
+    left:-25px;
+    width:250px;
+    height:auto;
+    display:block;
+    z-index:999;
+}
